@@ -50,7 +50,7 @@ std::vector<Line> load(const std::filesystem::path &path) {
             "itemRgb", "blockCount",
             "blockSizes", "blockStarts"
         });
-    csv::CSVReader csvReader(path.native(), format);
+    csv::CSVReader csvReader(path.string(), format);
 
     csv::CSVRow row;
     std::vector<Line> res;
